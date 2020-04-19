@@ -1,6 +1,8 @@
 import sys
-sys.path.insert(1, 'brain_games')
+
 import cli
+
+sys.path.insert(1, 'brain_games')
 #checking possibility to resolve import
 
 def main ():
