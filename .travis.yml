@@ -1,3 +1,17 @@
+#language: python
+#python:
+  # we want to test our package on several versions of Python
+#  - 3.7
+
+#before_install:
+  # make depends on poetry
+#  - pip install poetry
+
+#install:
+#  - make install
+
+
+
 language: python
 python:
   # we want to test our package on several versions of Python
@@ -9,3 +23,6 @@ before_install:
 
 install:
   - make install
+
+script:
+  - make check
