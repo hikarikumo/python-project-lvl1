@@ -1,8 +1,24 @@
-install: 
-	poetry install
+#install: 
+#	poetry install
+#
+#linter:
+#	poetry add --dev flake8
+#
+#lint:
+#	poetry run flake8 brain_games
+#
+#selfcheck:
+#	poetry check
+#
+#check: selfcheck lint
+#
+#.PHONY: install linter lint selfcheck check
 
-linter:
-	poetry add --dev flake8
+install:
+	@poetry install
+
+test:
+	poetry run pytest brain_games tests
 
 lint:
 	poetry run flake8 brain_games
@@ -10,6 +26,9 @@ lint:
 selfcheck:
 	poetry check
 
-check: selfcheck lint
+check: selfcheck test lint
 
-.PHONY: install linter lint selfcheck check
+build: check
+	@poetry build
+
+.PHONY: install test lint selfcheck check build
