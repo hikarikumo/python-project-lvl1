@@ -17,8 +17,8 @@
 install:
 	@poetry install
 
-test:
-	poetry run pytest brain_games tests
+#test:
+#	poetry run pytest brain_games tests
 
 lint:
 	poetry run flake8 brain_games
@@ -26,7 +26,7 @@ lint:
 selfcheck:
 	poetry check
 
-check: selfcheck test lint
+check: selfcheck lint
 
 build: check
 	@poetry build
