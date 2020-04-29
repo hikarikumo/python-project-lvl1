@@ -4,7 +4,6 @@
 
 import prompt
 
-
 def welcome_user():
     """Ask users name and store it."""
     user_name = prompt.string('May I know your name? ')

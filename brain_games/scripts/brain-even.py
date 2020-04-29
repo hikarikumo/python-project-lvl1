@@ -6,6 +6,7 @@ import sys
 sys.path.insert(
     1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
 import cli
+import greet_first
 import brain_games
 import even_check
 import even_game
@@ -13,7 +14,7 @@ import prompt
 import random
 
 def main():
-    brain_games.greet_first()
+    greet_first.greet_first()
     name = cli.welcome_user()
     counter = 1
     result = even_game.even_game()

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "alabarym_brain_games"
-version = "0.1.0"
+version = "0.1.3"
 description = ""
 authors = ["alabarym"]
 packages = [
@@ -8,7 +8,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-brain_games = "brain_games.scripts.brain_games:main"
+brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain-even:main"
 
 [tool.poetry.dependencies]
