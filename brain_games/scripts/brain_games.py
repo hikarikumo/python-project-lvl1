@@ -2,22 +2,16 @@
 
 # """Greeting messages and users representation."""
 
+# import greet_first
 # import cli
 # import sys
 
 # sys.path.insert(
 #     1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
 
-# # checking possibility to resolve import
-
-
-# def greet_first():
-#     """First greeting message."""
-#     print('Welcome to the Brain Games!')
-
 
 # def main():
-#     greet_first()
+#     greet_first.greet_first()
 #     cli.welcome_user()
 
 
