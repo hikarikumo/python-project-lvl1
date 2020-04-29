@@ -4,14 +4,15 @@
 
 import sys
 import brain_games
+sys.path.insert(
+    1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
 import cli
 import even_check
 import even_game
 import prompt
 import random
 
-
-if __name__ == '__main__':
+def main():
     brain_games.greet_first()
     name = cli.welcome_user()
     counter = 1
@@ -19,5 +20,11 @@ if __name__ == '__main__':
     while result == True and counter < 3:
         result = even_game.even_game()
         counter += 1
-    else:
-        print("Congratulations, ", name, "!", sep="")
+        if result == True and counter >= 3:
+            print("Congratulations, ", name, "!", sep="")
+        elif result == False:
+            print("Let's try again,")
+
+
+if __name__ == '__main__':
+    main()

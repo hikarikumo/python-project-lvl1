@@ -15,7 +15,10 @@ def greet_first():
     """First greeting message."""
     print('Welcome to the Brain Games!')
 
-
-if __name__ == '__main__':
+def main():
     greet_first()
     cli.welcome_user()
+
+
+if __name__ == '__main__':
+    main()

@@ -3,7 +3,6 @@
 """Main cli module for even game."""
 
 import sys
-import brain_games
 import cli
 import even_check
 import prompt
@@ -14,13 +13,18 @@ def even_game():
     even_result = even_check.check_if_even(random_number)
     print(random_number)
     answer = prompt.string(prompt="Answer 'yes' if number even otherwise answer 'no'.\n")
+    while str(answer) != 'no' and str(answer) != 'yes':
+        answer = prompt.string(
+            prompt="Answer 'yes' if number even otherwise answer 'no'.\n")
     if str(answer) == 'yes' and even_result == True:
-        print ("Your answer: yes")
+        print("Correct!")
         return True
     elif str(answer) == 'no' and even_result == False:
-        print("Your answer: yes")
+        print("Correct!")
         return True
-    else:
+    elif str(answer) == 'yes' and even_result == False:
         print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-        print("Let's try again,")
+        return False
+    elif str(answer) == 'no' and even_result == True:
+        print("'no' is wrong answer ;(. Correct answer was 'yes'.")
         return False
