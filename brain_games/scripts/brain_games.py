@@ -4,8 +4,8 @@
 
 import sys
 
-sys.path.insert(1, 'brain_games')
-
+sys.path.insert(
+    1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
 import cli
 
 # checking possibility to resolve import
