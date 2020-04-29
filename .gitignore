@@ -5,3 +5,6 @@ dist/
 .venv/
 *.un~
 *.old
+hexlet-project-workspace.code-workspace
+hexlet/
+.gitignore
