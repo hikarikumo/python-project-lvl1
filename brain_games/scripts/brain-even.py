@@ -3,10 +3,10 @@
 """Main cli module for even game."""
 
 import sys
-import brain_games
 sys.path.insert(
     1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
 import cli
+import brain_games
 import even_check
 import even_game
 import prompt

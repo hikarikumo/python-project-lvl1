@@ -5,7 +5,6 @@ description = ""
 authors = ["alabarym"]
 packages = [
   { include = "brain_games"  },
-  { include = "brain-even"  },  
 ]
 
 [tool.poetry.scripts]
