@@ -5,11 +5,11 @@ description = ""
 authors = ["alabarym"]
 packages = [
   { include = "brain_games"  },
-  
+  { include = "brain-even"  },  
 ]
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
+brain_games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain-even:main"
 
 [tool.poetry.dependencies]
