@@ -2,15 +2,13 @@
 
 """Main cli module for even game."""
 
-import sys
-import cli
 import even_check
 import prompt
 import random
 
-def even_game():
-    random_number = random.randint(0,10000)
 
+def even_game():
+    random_number = random.randint(0, 10000)
     even_result = even_check.check_if_even(random_number)
     print(random_number)
     answer = prompt.string(prompt="Answer 'yes' if number even otherwise answer 'no'.\n")
