@@ -1,5 +1,0 @@
-poetry run flake8 brain_games
-brain_games/even_game.py:25:11: WPS514 Found implicit `in` condition
-brain_games/even_check.py:6:1: DAR101 Missing parameter(s) in Docstring: - number
-brain_games/even_check.py:6:1: DAR201 Missing "Returns" in Docstring: - return
-Makefile:24: recipe for target 'lint' failed
