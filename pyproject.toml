@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "alabarym_brain_games"
-version = "0.1.3"
+version = "0.1.5"
 description = ""
 authors = ["alabarym"]
 packages = [
