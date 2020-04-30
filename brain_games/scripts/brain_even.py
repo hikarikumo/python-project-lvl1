@@ -10,17 +10,17 @@ import even_game
 
 
 def main():
-    """Main function to run theewgeg."""
+    """Run brain-even game."""
     greet_first.greet_first()
     name = cli.welcome_user()
     counter = 1
-    result = even_game.even_game()
-    while result is True and counter < 3:
-        result = even_game.even_game()
+    received_value = even_game.even_game()
+    while received_value is True and counter < 3:
+        received_value = even_game.even_game()
         counter += 1
-        if result is True and counter >= 3:
-            print("Congratulations, ", name, "!", sep="")
-        elif result is False:
+        if received_value is True and counter >= 3:
+            print('Congratulations, ', name, '!', sep='')
+        elif received_value is False:
             print("Let's try again,")
 
 
