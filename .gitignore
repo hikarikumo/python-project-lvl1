@@ -9,3 +9,4 @@ hexlet-project-workspace.code-workspace
 hexlet/
 .gitignore
 .vscode
+poetry.lock
