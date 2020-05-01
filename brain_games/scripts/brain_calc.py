@@ -16,10 +16,14 @@ def main():
     brain_calc_question.calc_greet_first()
     name = cli.welcome_user()
     received_value = calc_game.calc_game()
-    if received_value is True:
-        print('Congratulations, ', name, '!', sep='')
-    elif received_value is False:
-            print("Let's try again, ", name, '!', sep = '')
+    counter = 1
+    while received_value is True and counter < 3:
+        received_value = calc_game.calc_game()
+        counter += 1
+        if received_value is True and counter >= 3:
+            print('Congratulations, ', name, '!', sep='')
+    if received_value is False:
+        print("Let's try again, ", name, '!', sep='')
 
 
 if __name__ == '__main__':
