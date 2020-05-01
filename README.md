@@ -3,4 +3,6 @@
 # travis ci
 [![Build Status](https://travis-ci.com/alabarym/python-project-lvl1.svg?branch=master)](https://travis-ci.com/alabarym/python-project-lvl1)
 # asciinema: brain-games brain-even
- https://asciinema.org/a/nXTbcSbtql2NXpV1edZi0POIi
+https://asciinema.org/a/nXTbcSbtql2NXpV1edZi0POIi
+# asciinema: brain-calc
+https://asciinema.org/a/aA7CoVuGeXxsU9iaJBjPHpilo
