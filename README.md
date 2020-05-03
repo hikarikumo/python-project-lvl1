@@ -8,3 +8,5 @@ https://asciinema.org/a/nXTbcSbtql2NXpV1edZi0POIi
 https://asciinema.org/a/aA7CoVuGeXxsU9iaJBjPHpilo
 # asciinema: brain-gdc
 https://asciinema.org/a/gCn5l27ClWDhbfdGY5wbFOAK8
+# asciinema: brain-progression
+https://asciinema.org/a/JPKROcOUfDbYedkCZ47qE0v1H
