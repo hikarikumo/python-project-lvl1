@@ -27,7 +27,7 @@ def main():
         random_number, user_answer = question_prime()
         is_prime = prime_div_result(random_number)
         if is_prime is True and user_answer == 'yes':
-            print('Your answer: ' + user_answer + str(random_number) + 'is prime')
+            print('Your answer: ' + 'yes ' + str(random_number) + ' is prime')
             print('Correct!')
             if counter == 3:
                 print('Congratulations, ', name, '!', sep='')
