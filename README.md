@@ -1,5 +1,5 @@
 # CodeClimate Maintainability
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5e5597a68a3fd9bd440f/maintainability)](https://codeclimate.com/github/alabarym/python-project-lvl1/maintainability)
 # CodeClimate test coverage
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5e5597a68a3fd9bd440f/test_coverage)](https://codeclimate.com/github/alabarym/python-project-lvl1/test_coverage)
 # travis ci
