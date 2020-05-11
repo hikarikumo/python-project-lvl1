@@ -42,3 +42,15 @@ def calc_game():
     else:
         print("'" + str(question_sum) + "' " + "is wrong answer ;(. Correct answer was " + "'" + str(answer_sum) + "'")
     return False
+
+
+def calc_game_logic(received_value, name):
+    """Calc game logic function."""
+    counter = 1
+    while received_value is True and counter < 3:
+        received_value = calc_game()
+        counter += 1
+        if received_value is True and counter >= 3:
+            print('Congratulations, ', name, '!', sep='')
+        if received_value is False:
+            print("Let's try again, ", name, '!', sep='')
