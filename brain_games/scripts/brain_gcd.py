@@ -3,11 +3,9 @@
 """Main script for gcd game."""
 
 import sys
-sys.path.insert(1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
-import cli
-from greet_first import greet_first
-from brain_gcd_goal import gcd_goal_message
-from gcd_game import gcd_game
+sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
+from cli import greet_first, welcome_user
+from gcd_game import gcd_game, gcd_goal_message
 
 
 def main():
@@ -19,7 +17,7 @@ def main():
     """
     greet_first()
     gcd_goal_message()
-    name = cli.welcome_user()
+    name = welcome_user()
     gcd_game(name)
 
 

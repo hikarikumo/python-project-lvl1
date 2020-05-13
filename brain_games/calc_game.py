@@ -6,6 +6,11 @@ import random
 import prompt
 
 
+def calc_greet_first():
+    """First greeting message."""
+    print('What is the result of the expression?\n')
+    
+    
 def calc_game():
     """Play calculation game.
 

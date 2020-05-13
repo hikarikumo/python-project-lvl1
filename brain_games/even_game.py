@@ -2,9 +2,15 @@
 
 """Function declaration to verify the answers."""
 
-import even_check
 import prompt
 import random
+
+
+def check_if_even(number):
+    """Return true if even."""
+    if number % 2 == 0:
+        return True
+    return False
 
 
 def even_game():
@@ -19,7 +25,7 @@ def even_game():
         True ot False according to the provided answer by user.
     """
     random_number = random.randint(0, 10000)
-    even_result = even_check.check_if_even(random_number)
+    even_result = check_if_even(random_number)
     print(random_number)
     answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
     while (answer != 'no') and (answer != 'yes'):

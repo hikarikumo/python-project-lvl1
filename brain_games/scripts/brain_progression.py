@@ -4,11 +4,9 @@
 
 
 import sys
-sys.path.insert(1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
-import cli
-from greet_first import greet_first
-from progression_goal import progression_goal
-from progression_game import progression_game
+sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
+from cli import greet_first, welcome_user
+from progression_game import progression_game, progression_goal
 
 
 def main():
@@ -20,7 +18,7 @@ def main():
     """
     greet_first()
     progression_goal()
-    name = cli.welcome_user()
+    name = welcome_user()
     progression_game(name)
 
 

@@ -4,6 +4,11 @@
 import prompt
 
 
+def greet_first():
+    """First greeting message."""
+    print('Welcome to the Brain Games!')
+
+
 def welcome_user():
     """
     Ask users name and store it.

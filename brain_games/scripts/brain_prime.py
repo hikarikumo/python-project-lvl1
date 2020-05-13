@@ -4,18 +4,16 @@
 
 
 import sys
-sys.path.insert(1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
-import cli
-from greet_first import greet_first
-from prime_goal import prime_goal
-from prime_game import prime_game
+sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
+from cli import greet_first, welcome_user
+from prime_game import prime_game, prime_goal
 
 
 def main():
     """Run brain-prime game."""
     greet_first()
     prime_goal()
-    name = cli.welcome_user()
+    name = welcome_user()
     prime_game(name)
 
 

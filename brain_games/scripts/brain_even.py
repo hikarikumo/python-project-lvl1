@@ -3,17 +3,16 @@
 """Main cli module for even game."""
 
 import sys
-sys.path.insert(1, '/home/alabarym/git/alabarym/python-project-lvl1/brain_games')
-import cli
-import greet_first
-import even_game
+sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
+from cli import greet_first, welcome_user
+from even_game import even_game_logic
 
 
 def main():
     """Run brain-even game."""
-    greet_first.greet_first()
-    name = cli.welcome_user()
-    even_game.even_game_logic(name)
+    greet_first()
+    name = welcome_user()
+    even_game_logic(name)
 
 
 if __name__ == '__main__':
