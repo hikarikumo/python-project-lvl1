@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 """Function to check whether provided number is prime."""
 
-import prompt, random
+import prompt
+import random
 
 
 def question_prime():

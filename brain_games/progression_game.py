@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 """Function to calculate ariphmetic progression."""
 
-import random, prompt
+import random
+import prompt
 
 
 def progression_goal():
@@ -30,8 +31,7 @@ def question_progression():
         False and value if answer is not missing element.
     """
     miss_element, progression = progression_show()
-    question_to_user = prompt.string(
-        'Question: ' + string_progression(progression) + '\n')
+    question_to_user = prompt.string('Question: ' + string_progression(progression) + '\n')
     if question_to_user == str(miss_element):
         return True, miss_element
     return False, miss_element
