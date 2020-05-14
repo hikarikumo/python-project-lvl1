@@ -5,7 +5,7 @@
 import sys
 sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
 from cli import greet_first, welcome_user
-from calc_game import calc_greet_first, calc_game, calc_game_logic
+from calc_game import calc_greet_first, calc_game_logic
 
 
 def main():
@@ -13,8 +13,7 @@ def main():
     greet_first()
     calc_greet_first()
     name = welcome_user()
-    received_value = calc_game()
-    calc_game_logic(received_value, name)
+    calc_game_logic(name)
 
 
 if __name__ == '__main__':
