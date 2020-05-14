@@ -71,21 +71,25 @@ def multiplication_check():
     return False
 
 
+def user_fail_message(name):
+    """Report fail to user."""
+    print("Let's try again, ", name, '!', sep='')
+
 def calc_game_logic(name):
     """Calc game logic function."""
     counter = 1
     while counter <= 3:
         received_value_summ = summ_check()
         if received_value_summ is False:
-            print("Let's try again, ", name, '!', sep='')
+            user_fail_message(name)
             break
         received_value_subtract = subtract_check()
         if received_value_subtract is False:
-            print("Let's try again, ", name, '!', sep='')
+            user_fail_message(name)
             break
         received_value_multiplication = multiplication_check()
         if received_value_multiplication is False:
-            print("Let's try again, ", name, '!', sep='')
+            user_fail_message(name)
             break
         if received_value_multiplication is True and counter >= 3:
             print('Congratulations, ', name, '!', sep='')

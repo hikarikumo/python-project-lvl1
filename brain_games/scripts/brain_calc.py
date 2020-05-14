@@ -2,6 +2,7 @@
 
 """Main script for calc game."""
 
+
 import sys
 sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
 from cli import greet_first, welcome_user
