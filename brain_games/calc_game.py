@@ -54,8 +54,8 @@ def calc_game_logic(received_value, name):
     counter = 1
     while received_value is True and counter < 3:
         received_value = calc_game()
-        counter += 1
         if received_value is True and counter >= 3:
             print('Congratulations, ', name, '!', sep='')
-        if received_value is False:
+        elif received_value is False:
             print("Let's try again, ", name, '!', sep='')
+        counter += 1
