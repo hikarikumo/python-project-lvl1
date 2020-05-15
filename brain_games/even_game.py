@@ -28,8 +28,6 @@ def even_game():
     even_result = check_if_even(random_number)
     print(random_number)
     answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
-    while (answer != 'no') and (answer != 'yes'):
-        answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
     while answer == 'yes':
         if even_result:
             return True
