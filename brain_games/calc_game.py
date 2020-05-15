@@ -75,6 +75,7 @@ def user_fail_message(name):
     """Report fail to user."""
     print("Let's try again, ", name, '!', sep='')
 
+
 def calc_game_logic(name):
     """Calc game logic function."""
     counter = 1
