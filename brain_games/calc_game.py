@@ -80,18 +80,15 @@ def calc_game_logic(name):
     """Calc game logic function."""
     counter = 1
     while counter <= 3:
-        received_value_summ = summ_check()
-        if received_value_summ is False:
+        if summ_check() is False:
             user_fail_message(name)
             break
-        received_value_subtract = subtract_check()
-        if received_value_subtract is False:
+        elif subtract_check() is False:
             user_fail_message(name)
             break
-        received_value_multiplication = multiplication_check()
-        if received_value_multiplication is False:
+        elif multiplication_check() is False:
             user_fail_message(name)
             break
-        if received_value_multiplication is True and counter >= 3:
+        elif counter >= 3:
             print('Congratulations, ', name, '!', sep='')
         counter += 1
