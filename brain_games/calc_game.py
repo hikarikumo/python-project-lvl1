@@ -89,5 +89,6 @@ def calc_game_logic(name):
         elif multiplication_check() is False:
             user_fail_message(name)
             break
+        elif counter == 3:
+            print('Congratulations, ', name, '!', sep='')
         counter += 1
-    print('Congratulations, ', name, '!', sep='')
