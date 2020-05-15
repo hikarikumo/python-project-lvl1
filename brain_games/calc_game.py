@@ -22,12 +22,15 @@ def calc_game_summ():
 def summ_check():
     """Check calculation of summary by user."""
     answer_sum, number1, number2 = calc_game_summ()
-    question_sum = prompt.string('Question: ' + str(number1) + ' + ' + str(number2) + '\n')
+    question_sum = prompt.string('Question: '
+                                 + str(number1) + ' + ' + str(number2) + '\n')
     if question_sum == str(answer_sum):
         print('Your answer: ' + question_sum)
         print('Correct!')
         return True
-    print("'" + str(question_sum) + "' " + "is wrong answer ;(. Correct answer was " + "'" + str(answer_sum) + "'")
+    print("'" + str(question_sum) + "' " + 
+          "is wrong answer ;(. Correct answer was "
+           + "'" + str(answer_sum) + "'")
     return False
 
 
@@ -42,12 +45,15 @@ def calc_game_subtract():
 def subtract_check():
     """Check calculation of substract by user."""
     answer_subtr, number3, number4 = calc_game_subtract()
-    question_subtr = prompt.string('Question: ' + str(number3) + ' - ' + str(number4) + '\n')
+    question_subtr = prompt.string('Question: ' 
+                                   + str(number3) + ' - ' + str(number4) + '\n')
     if question_subtr == str(answer_subtr):
         print('Your answer: ' + question_subtr)
         print('Correct!')
         return True
-    print("'" + str(question_subtr) + "' " + "is wrong answer ;(. Correct answer was " + "'" + str(answer_subtr) + "'")
+    print("'" + str(question_subtr) + "' " + 
+          "is wrong answer ;(. Correct answer was "
+           + "'" + str(answer_subtr) + "'")
     return False
 
 
@@ -62,12 +68,15 @@ def calc_game_multiplication():
 def multiplication_check():
     """Check calculation of multiplication by user."""
     answer_mult, number5, number6 = calc_game_multiplication()
-    question_mult = prompt.string('Question: ' + str(number5) + ' * ' + str(number6) + '\n')
+    question_mult = prompt.string('Question: ' 
+                                  + str(number5) + ' * ' + str(number6) + '\n')
     if question_mult == str(answer_mult):
         print('Your answer: ' + question_mult)
         print('Correct!')
         return True
-    print("'" + str(question_mult) + "' " + "is wrong answer ;(. Correct answer was " + "'" + str(answer_mult) + "'")
+    print("'" + str(question_mult) + "' "
+           + "is wrong answer ;(. Correct answer was " + "'" 
+           + str(answer_mult) + "'")
     return False
 
 
