@@ -24,7 +24,7 @@ def even_game():
     Returns:
         True ot False according to the provided answer by user.
     """
-    random_number = random.randint(0, 10000)
+    random_number = random.randint(0, 100)
     even_result = check_if_even(random_number)
     print(random_number)
     answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
@@ -45,11 +45,11 @@ def even_game_logic(name):
     counter = 1
     while counter <= 3:
         received_value = even_game()
-        if received_value is True:
+        if received_value:
             print('Correct!')
             if counter == 3:
                 print('Congratulations, ', name, '!', sep='')
-        elif received_value is False:
+        else:
             print("Let's try again,")
             break
         counter += 1
