@@ -31,12 +31,12 @@ def even_game():
     while (answer != 'no') and (answer != 'yes'):
         answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
     while answer == 'yes':
-        if even_result is True:
+        if even_result:
             return True
         print("'yes' is wrong answer ;(. Correct answer was 'no'.")
         return False
     while answer == 'no':
-        if even_result is False:
+        if not even_result:
             return True
         print("'no' is wrong answer ;(. Correct answer was 'yes'.")
         return False
