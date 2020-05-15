@@ -30,16 +30,18 @@ def even_game():
     answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
     while (answer != 'no') and (answer != 'yes'):
         answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
-    if answer == 'yes' and even_result is True:
-        return True
-    elif answer == 'no' and even_result is False:
-        return True
-    elif answer == 'yes' and even_result is False:
-        print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-        return False
-    elif answer == 'no' and even_result is True:
-        print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-        return False
+    while answer == 'yes':
+        if even_result is True:
+            return True
+        else:
+            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+            return False
+    while answer == 'no':
+        if even_result is False:
+            return True
+        else:
+            print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+            return False
 
 
 def even_game_logic(name):
