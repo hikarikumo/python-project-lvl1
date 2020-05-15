@@ -33,15 +33,13 @@ def even_game():
     while answer == 'yes':
         if even_result is True:
             return True
-        else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            return False
+        print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+        return False
     while answer == 'no':
         if even_result is False:
             return True
-        else:
-            print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-            return False
+        print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+        return False
 
 
 def even_game_logic(name):
