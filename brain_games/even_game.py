@@ -49,10 +49,9 @@ def even_game_logic(name):
         received_value = even_game()
         if received_value is True:
             print('Correct!')
+            if counter == 3:
+                print('Congratulations, ', name, '!', sep='')
         elif received_value is False:
             print("Let's try again,")
-            break
-        elif counter == 3:
-            print('Congratulations, ', name, '!', sep='')
             break
         counter += 1
