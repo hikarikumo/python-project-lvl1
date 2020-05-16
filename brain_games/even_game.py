@@ -24,7 +24,7 @@ def even_game():
     Returns:
         True ot False according to the provided answer by user.
     """
-    random_number = random.randint(0, 100)
+    random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
     print(random_number)
     answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
