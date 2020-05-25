@@ -4,6 +4,7 @@
 
 import prompt
 import random
+import general_module
 
 
 def check_if_even(number):
@@ -27,16 +28,17 @@ def even_game():
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
     print(random_number)
-    answer = prompt.string("Answer 'yes' if number even otherwise answer 'no'.\n")
+    general_module.even_question()
+    answer = prompt.string()
     while answer == 'yes':
         if even_result:
             return True
-        print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+        general_module.even_wrong_answer_yes(answer)
         return False
     while answer == 'no':
         if not even_result:
             return True
-        print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+        general_module.even_wrong_answer_no(answer)
         return False
 
 
@@ -46,10 +48,10 @@ def even_game_logic(name):
     while counter <= 3:
         received_value = even_game()
         if received_value:
-            print('Correct!')
+            general_module.correct_answer()
             if counter == 3:
-                print('Congratulations, ', name, '!', sep='')
+                general_module.game_success_finish(name)
         else:
-            print("Let's try again,")
+            general_module.try_again(name)
             break
         counter += 1
