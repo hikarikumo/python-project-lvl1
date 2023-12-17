@@ -1,71 +1,43 @@
-# -*- coding:utf-8 -*-
-"""Function to check whether provided number is prime."""
-
-import prompt
 import random
+import prompt
 from cli import greet_first, welcome_user
 
 
 def question_prime():
-    """
-    Ask the question and return bool and value.
-
-    Returns:
-        Question and number to guess to the user.
-    """
+    """Ask the question and return a tuple (number_to_guess, user_answer)."""
     number_to_guess = random.randint(1, 100)
-    user_answer = prompt.string('Number: ' + str(number_to_guess) + '\n')
+    user_answer = prompt.string(f'Number: {number_to_guess}\n')
     return number_to_guess, user_answer
 
 
 def prime_goal():
-    """Information about the goal of the prime game to the user."""
+    """Provide information about the goal of the prime game to the user."""
     print('Answer "yes" if given number is prime. Otherwise answer "no".\n')
 
 
-def prime_div_result(number):
-    """
-    Check if the number is prime.
-
-    Input:
-        Accept one number as parameter.
-
-    Returns:
-        Returns True if number is prime - False otherwise.
-    """
-    check_sequence = []
-    counter = 1
-    while counter <= number:
-        if number % counter == 0:
-            check_sequence.append(counter)
-        counter += 1
-    if len(check_sequence) > 2:
-        return False
-    return True
+def is_prime(number):
+    """Check if the number is prime."""
+    divisors = [count for count in range(1, number + 1) if number % count == 0]
+    return len(divisors) == 2
 
 
 def prime_game(name):
     """Brain game prime logic."""
-    counter = 1
-    while counter <= 3:
+    for _ in range(3):
         random_number, user_answer = question_prime()
-        is_prime = prime_div_result(random_number)
-        if is_prime is True and user_answer == 'yes':
-            print('Your answer: ' + 'yes ' + str(random_number) + ' is prime')
+        prime_status = is_prime(random_number)
+        
+        expected_answer = 'yes' if prime_status else 'no'
+        
+        if user_answer == expected_answer:
+            print(f'Your answer: {user_answer} {random_number} is prime')
             print('Correct!')
-            if counter == 3:
-                print('Congratulations, ', name, '!', sep='')
-                return True
-        elif is_prime is False and user_answer == 'no':
-            print('Your answer: ' + 'yes ' + str(random_number) + ' is not prime')
-            print('Correct!')
-            if counter == 3:
-                print('Congratulations, ', name, '!', sep='')
+            if _ == 2:
+                print(f'Congratulations, {name}!')
                 return True
         else:
-            print("Let's try again, ", name, '!', sep='')
+            print(f"Let's try again, {name}!")
             return False
-        counter += 1
 
 
 def main():

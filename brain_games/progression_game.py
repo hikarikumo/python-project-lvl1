@@ -1,6 +1,3 @@
-# -*- coding:utf-8 -*-
-"""Function to calculate ariphmetic progression."""
-
 import random
 import prompt
 from cli import greet_first, welcome_user
@@ -13,62 +10,52 @@ def progression_goal():
 
 def string_progression(progression):
     """Convert list into parsed string."""
-    counter = 0
-    string = ''
-    while counter < len(progression):
-        if counter == len(progression) - 1:
-            string += str(progression[counter])
-            return string
-        string += str(progression[counter]) + ', '
-        counter += 1
+    return ', '.join(map(str, progression))
 
 
 def question_progression():
     """
-    Ask the question and return bool and value.
+    Ask the question and return a tuple (is_correct, missing_element).
 
     Returns:
-        True and value if answer is missing element.
-        False and value if answer is not missing element.
+        Tuple with True and the missing element if the answer is correct,
+        Tuple with False and the missing element otherwise.
     """
     miss_element, progression = progression_show()
-    question_to_user = prompt.string('Question: ' + string_progression(progression) + '\n')
-    if question_to_user == str(miss_element):
-        return True, miss_element
-    return False, miss_element
+    question_to_user = prompt.string(f'Question: {string_progression(progression)}\n')
+    return question_to_user == str(miss_element), miss_element
 
 
 def progression_show():
     """
-    Create ariphmetic progression.
+    Create arithmetic progression.
 
     Returns:
         Progression with *hidden* element + value of that hidden element.
     """
-    random_number1 = random.randint(1, 10)
-    random_number2 = random.randint(1, 10)
-    random_number3 = random.randint(1, 10)
-    progression = progression_calc(random_number2, random_number3)
-    keep_value = progression[random_number1]
-    progression[random_number1] = '..'
+    random_index = random.randint(1, 10)
+    random_step = random.randint(1, 10)
+    random_initial = random.randint(1, 10)
+
+    progression = progression_calc(random_step, random_initial)
+    keep_value = progression[random_index]
+    progression[random_index] = '..'
+
     return keep_value, progression
 
 
 def progression_game(name):
     """Perform progression game logic."""
-    counter = 1
-    while counter <= 3:
+    for _ in range(3):
         calc_value, miss_element = question_progression()
-        if calc_value is True:
-            print('Your answer: ' + str(miss_element))
-            print('Correct!')
-            if counter == 3:
-                print('Congratulations, ', name, '!', sep='')
+        if calc_value:
+            print(f'Your answer: {miss_element}\nCorrect!')
+            if _ == 2:
+                print(f'Congratulations, {name}!')
                 return True
         else:
-            print("Let's try again, ", name, '!', sep='')
+            print(f"Let's try again, {name}!")
             return False
-        counter += 1
 
 
 def progression_calc(random_step, random_initial):
@@ -81,15 +68,9 @@ def progression_calc(random_step, random_initial):
     Returns:
         Returns progression list.
     """
-    progression = []
-    progression.append(random_initial)
     progression_length = 11
-    counter = 1
     progression_member = random_initial
-    while counter < progression_length:
-        progression_member += random_step
-        progression.append(progression_member)
-        counter += 1
+    progression = [progression_member + i * random_step for i in range(progression_length)]
     return progression
 
 
@@ -98,7 +79,7 @@ def main():
     Run brain-progression game.
 
     Returns:
-        Return and verify the proper elemen inside of the ariphmetic progressio.
+        Return and verify the proper element inside of the arithmetic progression.
     """
     greet_first()
     progression_goal()
