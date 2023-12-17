@@ -1,9 +1,7 @@
-# -*- coding:utf-8 -*-
-"""Calc games function to ask questions and verify the answers."""
-
 import random
 import prompt
 from cli import greet_first, welcome_user
+
 
 OPERATIONS = {
     'summation': ('+', lambda x, y: x + y),
@@ -43,16 +41,13 @@ def user_fail_message(name):
 
 
 def calc_game_logic(name):
-    counter = 1
-    while counter <= 3:
+    for counter in range(1,3):
         operations = list(OPERATIONS.keys())
         for operation in operations:
             if not play_game(operation):
                 user_fail_message(name)
                 return
-        if counter == 3:
-            print(f'Congratulations, {name}!')
-        counter += 1
+    print(f'Congratulations, {name}!')
 
 
 def main():
