@@ -8,9 +8,6 @@ packages = [
   { include = "brain_games"  },
 ]
 
-[build-system]
-requires = ["poetry-core>=1.0.0", "setuptools>=57.5.0", "wheel>=0.36.2"]
-
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
@@ -29,5 +26,5 @@ flake8 = "^3.7.9"
 autopep8 = "^1.5.2"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=0.12", "poetry-core>=1.0.0", "setuptools>=57.5.0", "wheel>=0.36.2"]
 build-backend = "poetry.masonry.api"
