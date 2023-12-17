@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "alabarym_brain_games"
+name = "hikarikumo_brain_games"
 version = "0.1.10"
 description = ""
-authors = ["alabarym"]
+authors = ["hikarikumo"]
 
 packages = [
   { include = "brain_games"  },

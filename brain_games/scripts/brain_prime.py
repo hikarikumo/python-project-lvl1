@@ -4,7 +4,7 @@
 
 
 import sys
-sys.path.append('/home/alabarym/git/alabarym/python-project-lvl1/brain_games/')
+sys.path.append('/Users/vladimir.vasilenko/git/python-project-lvl1/brain_games/')
 from cli import greet_first, welcome_user
 from prime_game import prime_game, prime_goal
 
