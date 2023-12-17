@@ -3,6 +3,7 @@
 
 import random
 import prompt
+from cli import greet_first, welcome_user
 
 
 def question_gcd():
@@ -72,3 +73,20 @@ def gcd_game(name):
             print("Let's try again, ", name, '!', sep='')
             return False
         counter += 1
+
+
+def main():
+    """
+    Run brain-gcd game.
+
+    returns:
+    Correct answer on the screen with result and username.
+    """
+    greet_first()
+    gcd_goal_message()
+    name = welcome_user()
+    gcd_game(name)
+
+
+if __name__ == '__main__':
+    main()

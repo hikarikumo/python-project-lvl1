@@ -3,6 +3,7 @@
 
 import random
 import prompt
+from cli import greet_first, welcome_user
 
 
 def calc_greet_first():
@@ -91,3 +92,15 @@ def calc_game_logic(name):
         elif counter == 3:
             print('Congratulations, ', name, '!', sep='')
         counter += 1
+
+
+def main():
+    """Run brain-calc game."""
+    greet_first()
+    calc_greet_first()
+    name = welcome_user()
+    calc_game_logic(name)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hikarikumo_brain_games"
-version = "0.1.11"
+version = "0.1.12"
 description = ""
 authors = ["hikarikumo"]
 

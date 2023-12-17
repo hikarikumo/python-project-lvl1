@@ -3,6 +3,7 @@
 
 import prompt
 import random
+from cli import greet_first, welcome_user
 
 
 def question_prime():
@@ -65,3 +66,15 @@ def prime_game(name):
             print("Let's try again, ", name, '!', sep='')
             return False
         counter += 1
+
+
+def main():
+    """Run brain-prime game."""
+    greet_first()
+    prime_goal()
+    name = welcome_user()
+    prime_game(name)
+
+
+if __name__ == '__main__':
+    main()

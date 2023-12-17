@@ -3,6 +3,7 @@
 
 import random
 import prompt
+from cli import greet_first, welcome_user
 
 
 def progression_goal():
@@ -90,3 +91,20 @@ def progression_calc(random_step, random_initial):
         progression.append(progression_member)
         counter += 1
     return progression
+
+
+def main():
+    """
+    Run brain-progression game.
+
+    Returns:
+        Return and verify the proper elemen inside of the ariphmetic progressio.
+    """
+    greet_first()
+    progression_goal()
+    name = welcome_user()
+    progression_game(name)
+
+
+if __name__ == '__main__':
+    main()

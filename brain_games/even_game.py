@@ -5,6 +5,7 @@
 import prompt
 import random
 import general_module
+from cli import greet_first, welcome_user
 
 
 def check_if_even(number):
@@ -55,3 +56,14 @@ def even_game_logic(name):
             general_module.try_again(name)
             break
         counter += 1
+
+
+def main():
+    """Run brain-even game."""
+    greet_first()
+    name = welcome_user()
+    even_game_logic(name)
+
+
+if __name__ == '__main__':
+    main()
