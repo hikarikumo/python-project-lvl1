@@ -1,26 +1,17 @@
-# -*- coding:utf-8 -*-
-"""Function to return value of gcd between two random values."""
-
 import random
 import prompt
 from cli import greet_first, welcome_user
 
 
 def question_gcd():
-    """
-    Ask the question and return bool and value.
-
-    Returns:
-        True and value if answer is gcd.
-        False and value if answer is not gcd.
-    """
+    """Ask the question and return a tuple (is_correct, gcd_value)."""
     random_number1 = random.randint(1, 100)
     random_number2 = random.randint(1, 100)
     gcd = gcd_calc(random_number1, random_number2)
-    question_to_user_gcd = prompt.string('Question: ' + str(random_number1) + ' ' + str(random_number2) + '\n')
-    if question_to_user_gcd == str(gcd):
-        return True, gcd
-    return False, gcd
+    
+    question_to_user_gcd = prompt.string(f'Question: {random_number1} {random_number2}\n')
+    
+    return question_to_user_gcd == str(gcd), gcd
 
 
 def gcd_goal_message():
@@ -29,59 +20,30 @@ def gcd_goal_message():
 
 
 def gcd_calc(random_number1, random_number2):
-    """
-    Calculate gcd of two random values.
-
-    random_number1: random interger value.
-    random_number1: int
-    random_number2: random interger value.
-    random_number2: int
-
-    Returns:
-        Return value of gcd between two generated random numbers.
-    """
-    list_div1 = []
-    list_div2 = []
-    count_n = 1
-    count_m = 1
-    while count_n <= random_number1:
-        res = random_number1 % count_n
-        if res == 0:
-            list_div1.append(count_n)
-        count_n += 1
-    while count_m <= random_number2:
-        res = random_number2 % count_m
-        if res == 0:
-            list_div2.append(count_m)
-        count_m += 1
+    """Calculate gcd of two random values."""
+    list_div1 = [count_n for count_n in range(1, random_number1 + 1) if random_number1 % count_n == 0]
+    list_div2 = [count_m for count_m in range(1, random_number2 + 1) if random_number2 % count_m == 0]
+    
     common_list = [index for index in list_div1 + list_div2 if index in list_div1 and index in list_div2]
     return common_list[-1]
 
 
 def gcd_game(name):
     """Execute main game logic."""
-    counter = 1
-    while counter <= 3:
+    for _ in range(3):
         status_calc, gcd = question_gcd()
-        if status_calc is True:
-            print('Your answer: ' + str(gcd))
-            print('Correct!')
-            if counter == 3:
-                print('Congratulations, ', name, '!', sep='')
+        if status_calc:
+            print(f'Your answer: {gcd}\nCorrect!')
+            if _ == 2:
+                print(f'Congratulations, {name}!')
                 return True
         else:
-            print("Let's try again, ", name, '!', sep='')
+            print(f"Let's try again, {name}!")
             return False
-        counter += 1
 
 
 def main():
-    """
-    Run brain-gcd game.
-
-    returns:
-    Correct answer on the screen with result and username.
-    """
+    """Run brain-gcd game."""
     greet_first()
     gcd_goal_message()
     name = welcome_user()
