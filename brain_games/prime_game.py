@@ -21,21 +21,18 @@ def is_prime(number):
 
 
 def prime_game(name):
-    for _ in range(3):
+    attempts = 3
+    for _ in range(attempts):
         random_number, user_answer = question_prime()
-        prime_status = is_prime(random_number)
-        
-        expected_answer = 'yes' if prime_status else 'no'
-        
-        if user_answer == expected_answer:
+        if is_prime(random_number) == (user_answer.lower() == 'yes'):
             print(f'Your answer: {user_answer} {random_number} is prime')
             print('Correct!')
-            if _ == 2:
-                print(f'Congratulations, {name}!')
-                return True
-        
+            print(f'Congratulations, {name}!')
+            return True
+
         print(f"Let's try again, {name}!")
 
+    print(f'Sorry, you have used all {attempts} attempts. The correct answer was {"yes" if is_prime(random_number) else "no"} {random_number}.')
     return False
 
 
