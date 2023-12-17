@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hikarikumo_brain_games"
+name = "hexlet-code"
 version = "0.1.12"
 description = ""
 authors = ["hikarikumo"]
