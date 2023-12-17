@@ -15,14 +15,13 @@ def even_game():
     even_result = check_if_even(random_number)
     print(f'{random_number}\nAnswer "yes" if the number is even, otherwise answer "no".')
     answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
+    
     if answer in ['yes', 'no']:
-        if (answer == 'yes' and even_result) or (answer == 'no' and not even_result):
-            return True
-        even_wrong_answer(answer)
-        return False
+        return (answer == 'yes' and even_result) or (answer == 'no' and not even_result)
     else:
         print("Invalid input. Please answer 'yes' or 'no'.")
         return False
+
 
 def even_game_logic(name):
     """Even game main logic."""
