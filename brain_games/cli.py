@@ -19,3 +19,13 @@ def welcome_user():
     user_name = prompt.string('May I know your name? ')
     print('Hello, ', user_name, '!', sep='')
     return user_name
+
+
+def main():
+    """Script to say hi to user."""
+    greet_first()
+    welcome_user()
+
+
+if __name__ == '__main__':
+    main()
