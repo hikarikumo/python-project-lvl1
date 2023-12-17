@@ -46,16 +46,20 @@ def progression_show():
 
 def progression_game(name):
     """Perform progression game logic."""
-    for _ in range(3):
+    attempts = 3
+    for _ in range(attempts):
         calc_value, miss_element = question_progression()
         if calc_value:
             print(f'Your answer: {miss_element}\nCorrect!')
-            if _ == 2:
+            if _ == attempts - 1:
                 print(f'Congratulations, {name}!')
                 return True
         else:
             print(f"Let's try again, {name}!")
-            return False
+
+    print(f'Sorry, you have used all {attempts} attempts. The correct answer was {miss_element}.')
+    return False
+
 
 
 def progression_calc(random_step, random_initial):
