@@ -16,13 +16,11 @@ def prime_goal():
 
 
 def is_prime(number):
-    """Check if the number is prime."""
     divisors = [count for count in range(1, number + 1) if number % count == 0]
     return len(divisors) == 2
 
 
 def prime_game(name):
-    """Brain game prime logic."""
     for _ in range(3):
         random_number, user_answer = question_prime()
         prime_status = is_prime(random_number)
@@ -35,9 +33,10 @@ def prime_game(name):
             if _ == 2:
                 print(f'Congratulations, {name}!')
                 return True
-        else:
-            print(f"Let's try again, {name}!")
-            return False
+        
+        print(f"Let's try again, {name}!")
+
+    return False
 
 
 def main():
