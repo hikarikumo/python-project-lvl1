@@ -41,12 +41,12 @@ def user_fail_message(name):
 
 
 def calc_game_logic(name):
-    for counter in range(1,3):
-        operations = list(OPERATIONS.keys())
-        for operation in operations:
-            if not play_game(operation):
-                user_fail_message(name)
-                return
+    operations = list(OPERATIONS.keys())
+    random.shuffle(operations)
+    for operation in operations:
+        if not play_game(operation):
+            user_fail_message(name)
+            return
     print(f'Congratulations, {name}!')
 
 
