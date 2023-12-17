@@ -1,19 +1,17 @@
-# -*- coding:utf-8 -*-
-
-"""Function declaration to verify the answers."""
-
 import prompt
 import random
 import general_module
 from cli import greet_first, welcome_user
 
-
 def check_if_even(number):
     """Return true if even."""
-    if number % 2 == 0:
-        return True
-    return False
+    return number % 2 == 0
 
+def even_question():
+    print("Answer 'yes' if number even otherwise answer 'no'.")
+
+def even_wrong_answer(correct_answer):
+    print(f"'{correct_answer}' is wrong answer ;(. Correct answer was '{'no' if correct_answer == 'yes' else 'yes'}.")
 
 def even_game():
     """
@@ -29,41 +27,31 @@ def even_game():
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
     print(random_number)
-    general_module.even_question()
-    answer = prompt.string()
-    while answer == 'yes':
-        if even_result:
+    even_question()
+    answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
+    if answer in ['yes', 'no']:
+        if (answer == 'yes' and even_result) or (answer == 'no' and not even_result):
             return True
-        general_module.even_wrong_answer_yes(answer)
+        even_wrong_answer(answer)
         return False
-    while answer == 'no':
-        if not even_result:
-            return True
-        general_module.even_wrong_answer_no(answer)
+    else:
+        print("Invalid input. Please answer 'yes' or 'no'.")
         return False
-
 
 def even_game_logic(name):
     """Even game main logic."""
-    counter = 1
-    while counter <= 3:
+    for _ in range(3):
         received_value = even_game()
-        if received_value:
-            general_module.correct_answer()
-            if counter == 3:
-                general_module.game_success_finish(name)
-        else:
+        if not received_value:
             general_module.try_again(name)
             break
-        counter += 1
-
+        general_module.correct_answer()
 
 def main():
     """Run brain-even game."""
     greet_first()
     name = welcome_user()
     even_game_logic(name)
-
 
 if __name__ == '__main__':
     main()
