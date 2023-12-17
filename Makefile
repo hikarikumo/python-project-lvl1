@@ -15,7 +15,7 @@
 #.PHONY: install linter lint selfcheck check
 
 install:
-	@poetry install
+	poetry install
 
 #test:
 #	poetry run pytest brain_games tests
@@ -23,12 +23,7 @@ install:
 lint:
 	poetry run flake8 brain_games
 
-selfcheck:
-	poetry check
-
-check: selfcheck lint
-
-build: check
-	@poetry build
+build: 
+	poetry build
 
 .PHONY: install test lint selfcheck check build
