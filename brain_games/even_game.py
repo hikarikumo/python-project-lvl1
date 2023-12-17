@@ -14,16 +14,6 @@ def even_wrong_answer(correct_answer):
     print(f"'{correct_answer}' is wrong answer ;(. Correct answer was '{'no' if correct_answer == 'yes' else 'yes'}.")
 
 def even_game():
-    """
-    Verify the correct answer.
-
-    Test what does the user type in: yes or not.
-    Other characters are not allowed.
-    Verify the correct answer provided by user.
-
-    Returns:
-        True ot False according to the provided answer by user.
-    """
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
     print(random_number)
