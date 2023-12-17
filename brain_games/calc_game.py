@@ -2,7 +2,6 @@
 """Calc games function to ask questions and verify the answers."""
 
 import random
-
 import prompt
 
 

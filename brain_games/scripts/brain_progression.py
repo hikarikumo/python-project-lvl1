@@ -4,7 +4,10 @@
 
 
 import sys
-sys.path.append('/Users/vladimir.vasilenko/git/python-project-lvl1/brain_games/')
+import os
+current_script_dir = os.path.dirname(__file__)
+brain_games_path = os.path.join(current_script_dir, '..')
+sys.path.append(brain_games_path)
 from cli import greet_first, welcome_user
 from progression_game import progression_game, progression_goal
 
