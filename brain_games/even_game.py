@@ -7,17 +7,13 @@ def check_if_even(number):
     """Return true if even."""
     return number % 2 == 0
 
-def even_question():
-    print("Answer 'yes' if number even otherwise answer 'no'.")
-
 def even_wrong_answer(correct_answer):
     print(f"'{correct_answer}' is wrong answer ;(. Correct answer was '{'no' if correct_answer == 'yes' else 'yes'}.")
 
 def even_game():
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
-    print(random_number)
-    even_question()
+    print(f'{random_number}\nAnswer "yes" if the number is even, otherwise answer "no".')
     answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
     if answer in ['yes', 'no']:
         if (answer == 'yes' and even_result) or (answer == 'no' and not even_result):
