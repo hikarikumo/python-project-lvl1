@@ -13,7 +13,7 @@ def even_wrong_answer(correct_answer):
 def even_game():
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
-    # print(f'{random_number}\nAnswer "yes" if the number is even, otherwise answer "no".')
+    print(f'Answer "yes" if the number is even, otherwise answer "no".')
     print(f'Question: {random_number}')
     answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
     
