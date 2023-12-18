@@ -2,8 +2,6 @@
 
 """Main cli module for even game."""
 
-import sys
-import os
 import brain_games
 from even_game import main
 

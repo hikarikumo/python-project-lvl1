@@ -2,8 +2,6 @@
 
 """Main script for gcd game."""
 
-import sys
-import os
 import brain_games
 from gcd_game import main
 
