@@ -33,6 +33,8 @@ def even_game_logic(name):
             general_module.try_again(name)
             break
         general_module.correct_answer()
+    general_module.game_success_finish(name)
+
 
 def main():
     """Run brain-even game."""
