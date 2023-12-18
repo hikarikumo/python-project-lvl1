@@ -8,7 +8,7 @@ python >= 3.7
 
 ## Travis ci
 
-[![Build Status](https://travis-ci.com/hikarikumo/python-project-lvl1.svg?branch=master)](https://travis-ci.com/hikarikumo/python-project-lvl1)
+[![Build Status](https://app.travis-ci.com/hikarikumo/python-project-lvl1.svg?branch=master)](https://app.travis-ci.com/hikarikumo/python-project-lvl1)
 
 [asciinema: brain-games brain-even](https://asciinema.org/a/nXTbcSbtql2NXpV1edZi0POIi)
 
