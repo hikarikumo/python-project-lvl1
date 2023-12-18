@@ -13,7 +13,8 @@ def even_wrong_answer(correct_answer):
 def even_game():
     random_number = random.randint(0, 1000)
     even_result = check_if_even(random_number)
-    print(f'{random_number}\nAnswer "yes" if the number is even, otherwise answer "no".')
+    # print(f'{random_number}\nAnswer "yes" if the number is even, otherwise answer "no".')
+    print(f'Question: {random_number}')
     answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
     
     if answer in ['yes', 'no']:
@@ -23,20 +24,22 @@ def even_game():
         return False
 
 
-def even_game_logic(name):
+# def even_game_logic(name):
+def even_game_logic():
     """Even game main logic."""
     for _ in range(3):
         received_value = even_game()
         if not received_value:
-            general_module.try_again(name)
+            general_module.try_again()
             break
         general_module.correct_answer()
 
 def main():
     """Run brain-even game."""
-    greet_first()
-    name = welcome_user()
-    even_game_logic(name)
+    # greet_first()
+    # name = welcome_user()
+    # even_game_logic(name)
+    even_game_logic()
 
 if __name__ == '__main__':
     main()

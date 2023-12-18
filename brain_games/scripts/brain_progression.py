@@ -3,7 +3,11 @@
 """Main script for progression game."""
 
 
-import brain_games
+import sys
+import os
+current_script_dir = os.path.dirname(__file__)
+brain_games_path = os.path.join(current_script_dir, '..')
+sys.path.append(brain_games_path)
 from progression_game import main
 
 
