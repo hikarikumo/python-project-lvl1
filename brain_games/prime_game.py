@@ -27,14 +27,12 @@ def prime_game(name):
         if is_prime(random_number) == (user_answer.lower() == 'yes'):
             print(f'Your answer: {user_answer} {random_number} is prime')
             print('Correct!')
-            print(f'Congratulations, {name}!')
-            return True
-
-        print(f"Let's try again, {name}!")
-
-    print(f'Sorry, you have used all {attempts} attempts. The correct answer was {"yes" if is_prime(random_number) else "no"} {random_number}.')
-    return False
-
+            if _ == attempts - 1:
+                print(f'Congratulations, {name}!')
+                return True
+        else:
+            print(f"Let's try again, {name}!")
+            return False
 
 def main():
     """Run brain-prime game."""
