@@ -10,7 +10,7 @@ def check_if_even(number):
 
 
 def even_wrong_answer(correct):
-    print(f"'{correct}'- wrong. Correct - '{'no' if correct == 'yes' else 'yes'}.")
+    print(f"Not '{correct}'. Correct '{'no' if correct == 'yes' else 'yes'}.")
 
 
 def even_game():

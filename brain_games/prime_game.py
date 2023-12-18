@@ -16,7 +16,7 @@ def prime_goal():
 
 
 def is_prime(number):
-    divisors = [count for count in range(1, number + 1) if number % count == 0]
+    divisors = [c for c in range(1, number + 1) if number % c == 0]
     return len(divisors) == 2
 
 

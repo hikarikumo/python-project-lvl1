@@ -4,7 +4,6 @@ from cli import greet_first, welcome_user
 
 
 def question_gcd():
-    """Ask the question and return a tuple (is_correct, gcd_value)."""
     random_number1 = random.randint(1, 100)
     random_number2 = random.randint(1, 100)
     gcd = gcd_calc(random_number1, random_number2)
@@ -17,7 +16,6 @@ def question_gcd():
 
 
 def gcd_goal_message():
-    """Information about the goal to the user."""
     print("Find the greatest common divisor of given numbers.\n")
 
 
