@@ -8,7 +8,7 @@ def progression_goal():
     print("What number is missing in the progression?\n")
 
 
-def string_progression(progression):
+def string_pgr(progression):
     """Convert list into parsed string."""
     return " ".join(map(str, progression))
 
@@ -22,8 +22,8 @@ def question_progression():
         Tuple with False and the missing element otherwise.
     """
     miss_element, progression = progression_show()
-    question_to_user = prompt.string(f"Question: {string_progression(progression)}\n")
-    return question_to_user == str(miss_element), miss_element
+    question = prompt.string(f"Question: {string_pgr(progression)}\n")
+    return question == str(miss_element), miss_element
 
 
 def progression_show():
@@ -57,7 +57,6 @@ def progression_game(name):
         else:
             print(f"Let's try again, {name}!")
             break
-    # print(f'Sorry, you have used all {attempts} attempts. The correct answer was {miss_element}.')
     return False
 
 
@@ -80,12 +79,6 @@ def progression_calc(random_step, random_initial):
 
 
 def main():
-    """
-    Run brain-progression game.
-
-    Returns:
-        Return and verify the proper element inside of the arithmetic progression.
-    """
     greet_first()
     progression_goal()
     name = welcome_user()
