@@ -10,7 +10,7 @@ def progression_goal():
 
 def string_progression(progression):
     """Convert list into parsed string."""
-    return ', '.join(map(str, progression))
+    return ' '.join(map(str, progression))
 
 
 def question_progression():
@@ -56,8 +56,7 @@ def progression_game(name):
                 return True
         else:
             print(f"Let's try again, {name}!")
-
-    print(f'Sorry, you have used all {attempts} attempts. The correct answer was {miss_element}.')
+    # print(f'Sorry, you have used all {attempts} attempts. The correct answer was {miss_element}.')
     return False
 
 
