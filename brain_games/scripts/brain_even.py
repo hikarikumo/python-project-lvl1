@@ -1,10 +1,11 @@
 import sys
 import os
+from importlib import import_module
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-current_script_dir = os.path.dirname(__file__)
-brain_games_path = os.path.join(current_script_dir, "..")
-sys.path.append(brain_games_path)
-from even_game import main
+
+even_game = import_module("even_game")
+main = even_game.main
 
 
 if __name__ == "__main__":

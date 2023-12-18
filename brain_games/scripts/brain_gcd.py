@@ -1,10 +1,11 @@
 import sys
 import os
+from importlib import import_module
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-current_script_dir = os.path.dirname(__file__)
-brain_games_path = os.path.join(current_script_dir, "..")
-sys.path.append(brain_games_path)
-from gcd_game import main
+
+gcd_game = import_module("gcd_game")
+main = gcd_game.main
 
 
 if __name__ == "__main__":
