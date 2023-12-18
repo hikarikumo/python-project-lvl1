@@ -9,9 +9,9 @@ def check_if_even(number):
     return number % 2 == 0
 
 
-def even_wrong_answer(correct_answer):
+def even_wrong_answer(correct):
     print(
-        f"'{correct_answer}' is wrong. Correct is '{'no' if correct_answer == 'yes' else 'yes'}."
+        f"'{correct}'- wrong. Correct - '{'no' if correct == 'yes' else 'yes'}."
     )
 
 
@@ -40,7 +40,7 @@ def even_game_logic(name):
         if not received_value:
             general_module.try_again(name)
             break
-        general_module.correct_answer()
+        general_module.correct()
     general_module.game_success_finish(name)
 
 
