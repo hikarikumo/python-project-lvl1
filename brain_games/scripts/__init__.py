@@ -9,10 +9,10 @@ def import_modules():
 
     # Return imported modules
     return {
-        'brain_calc': brain_calc,
-        'brain_even': brain_even,
-        'brain_games': brain_games,
-        'brain_gcd': brain_gcd,
-        'brain_prime': brain_prime,
-        'brain_progression': brain_progression,
+        "brain_calc": brain_calc,
+        "brain_even": brain_even,
+        "brain_games": brain_games,
+        "brain_gcd": brain_gcd,
+        "brain_prime": brain_prime,
+        "brain_progression": brain_progression,
     }
