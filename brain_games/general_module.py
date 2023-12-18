@@ -1,4 +1,4 @@
-def correct_answer():
+def correct():
     print("Correct!")
 
 

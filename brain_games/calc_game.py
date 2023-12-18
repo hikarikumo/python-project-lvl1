@@ -20,20 +20,20 @@ def generate_question(operation):
     return f"Question: {num1} {symbol} {num2}\n", num1, num2
 
 
-def check_answer(question, answer, correct_answer):
-    if answer == str(correct_answer):
+def check_answer(question, answer, correct):
+    if answer == str(correct):
         print(f"Your answer: {answer}")
         print("Correct!")
         return True
-    print(f"'{answer}' is wrong. Correct is '{correct_answer}'")
+    print(f"'{answer}' is wrong. Correct is '{correct}'")
     return False
 
 
 def play_game(operation):
     question, num1, num2 = generate_question(operation)
-    correct_answer = OPERATIONS[operation][1](num1, num2)
+    correct = OPERATIONS[operation][1](num1, num2)
     user_answer = prompt.string(question)
-    return check_answer(question, user_answer, correct_answer)
+    return check_answer(question, user_answer, correct)
 
 
 def user_fail_message(name):
