@@ -1,6 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""Main script for prime game."""
 import sys
 import os
 

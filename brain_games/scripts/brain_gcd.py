@@ -1,7 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""Main script for gcd game."""
-
 import sys
 import os
 

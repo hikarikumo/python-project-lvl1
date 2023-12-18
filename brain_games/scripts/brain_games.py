@@ -1,7 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""Greeting messages and users representation."""
-
 import sys
 import os
 

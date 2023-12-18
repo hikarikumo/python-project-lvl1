@@ -1,8 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""Main script for progression game."""
-
-
 import sys
 import os
 

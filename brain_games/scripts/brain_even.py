@@ -1,7 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""Main cli module for even game."""
-
 import sys
 import os
 
