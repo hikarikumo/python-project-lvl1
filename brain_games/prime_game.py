@@ -6,7 +6,7 @@ from cli import greet_first, welcome_user
 def question_prime():
     """Ask the question and return a tuple (number_to_guess, user_answer)."""
     number_to_guess = random.randint(1, 100)
-    user_answer = prompt.string(f'Number: {number_to_guess}\n')
+    user_answer = prompt.string(f'Question: {number_to_guess}\n')
     return number_to_guess, user_answer
 
 
