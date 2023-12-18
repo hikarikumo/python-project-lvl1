@@ -6,7 +6,7 @@ import prompt
 
 def greet_first():
     """First greeting message."""
-    print('Welcome to the Brain Games!')
+    print("Welcome to the Brain Games!")
 
 
 def welcome_user():
@@ -16,8 +16,8 @@ def welcome_user():
     Returns:
         name of the user.
     """
-    user_name = prompt.string('May I have your name? ')
-    print('Hello, ', user_name, '!', sep='')
+    user_name = prompt.string("May I have your name? ")
+    print("Hello, ", user_name, "!", sep="")
     return user_name
 
 
@@ -27,5 +27,5 @@ def main():
     welcome_user()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
