@@ -16,30 +16,29 @@ def even_game():
     print(f'Answer "yes" if the number is even, otherwise answer "no".')
     print(f'Question: {random_number}')
     answer = prompt.string().lower()  # Convert answer to lowercase for case-insensitive comparison
-    
     if answer in ['yes', 'no']:
-        return (answer == 'yes' and even_result) or (answer == 'no' and not even_result)
+        if (answer == 'yes' and even_result) or (answer == 'no' and not even_result):
+            return True
+        even_wrong_answer(answer)
+        return False
     else:
         print("Invalid input. Please answer 'yes' or 'no'.")
         return False
 
-
-# def even_game_logic(name):
-def even_game_logic():
+def even_game_logic(name):
     """Even game main logic."""
     for _ in range(3):
         received_value = even_game()
         if not received_value:
-            general_module.try_again()
+            general_module.try_again(name)
             break
         general_module.correct_answer()
 
 def main():
     """Run brain-even game."""
-    # greet_first()
-    # name = welcome_user()
-    # even_game_logic(name)
-    even_game_logic()
+    greet_first()
+    name = welcome_user()
+    even_game_logic(name)
 
 if __name__ == '__main__':
     main()

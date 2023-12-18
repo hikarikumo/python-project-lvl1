@@ -2,12 +2,10 @@ def correct_answer():
     print('Correct!')
 
 
-def game_success_finish():
-    # print('Congratulations, ', name, '!', sep='')
-    print('Congratulations!')
+def game_success_finish(name):
+    print('Congratulations, ', name, '!', sep='')
 
 
-def try_again():
-    # print("Let's try again, ", name, "!", sep='')
-    print("Let's try again!")
+def try_again(name):
+    print("Let's try again, ", name, "!", sep='')
 
