@@ -56,6 +56,7 @@ def progression_game(name):
                 return True
         else:
             print(f"Let's try again, {name}!")
+            break
     # print(f'Sorry, you have used all {attempts} attempts. The correct answer was {miss_element}.')
     return False
 
