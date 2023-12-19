@@ -2,6 +2,8 @@
 
 python >= 3.7
 
+## Hexlet-check Maintainability
+
 [![hexlet-check](https://github.com/hikarikumo/python-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/hikarikumo/python-project-lvl1/actions/workflows/hexlet-check.yml)
 
 ## CodeClimate Maintainability
