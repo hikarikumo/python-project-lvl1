@@ -10,3 +10,4 @@ hexlet/
 .gitignore
 .vscode
 poetry.lock
+*.whl
